@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EMAIL STUFF</title>
+</head>
+<body>
+    <h1>Registered emails:</h1>
+    <table style="width: 200">
+        <tr><th></th><th></th></tr>
+            {% for i in emails: %}
+                <tr>
+                    <td>{{ i['email'] }}</td>
+                    <td>{{ i['created_at'] }}</td>
+                </tr>
+                
+        
+            {% endfor %}
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EMAIL STUFF</title>
+</head>
+<body>
+    <form action="/process" method="post">
+        <label for="email">Email Address:<input type="text" name="email" id="email"></label>
+        <input type="submit" name="go" value="Submit">
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <p>Email is not valid. please try again</p>
+        {%endif%}
+    {%endwith%}
+    
+</body>
+</html>
